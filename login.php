@@ -1,5 +1,11 @@
 <?php
+   //start the session
+   session_start();
+?>
+
+<?php
     
+
     require 'db_connect.php';
     
     // login parameters
@@ -20,6 +26,8 @@
     	echo "Name: ". $row[1]."<br>";
     	echo "E-mail: ". $row[2]."<br>";
     	echo "Password: ". $row[3]."<br>";
+
+        $_SESSION['user_id'] = $row[0];
     }
     else
     	echo "You have to signup before log in.<br>";
