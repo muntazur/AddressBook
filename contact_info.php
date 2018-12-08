@@ -25,20 +25,17 @@
 
           </div>
 
-          <div class = "logout"> 
-
-          </div>
-
        </div>
 
 
-        <div class = "address">
+       <div class = "enter">
+               
+                <ul>
+                    <li> <a href = "my_contacts.php"> My Contacts </a> </li>
+                    <li> <a href = "contact.php"> Add New Contact </a> </li>
+                </ul>
 
-            <h3 id = 'A'> AddressBook </h3>
-            
        </div>
-
-
 
     </body>
 

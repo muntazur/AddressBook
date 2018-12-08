@@ -5,13 +5,42 @@
 
 ?>
 
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset = "utf-8">
+        <title>
+            my_contacts
+        </title>
+
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+
+
+<body>
+
+
+	<div class = "top">
+
+    	<div class = "cen">
+            <ul>
+                 <li> <a href = "version.php"> Home </a> </li>
+                 <li> <a href = "contact_info.php"> Contact </a> </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
 <?php
 
 	require 'db_connect.php';
     
-    if(isset($_POST['u_btn']))
-    {
-
+  
     	$user_id = $_SESSION['user_id'];
 
 		$sql = "select * from contact_info where user_id = '$user_id'";
@@ -38,33 +67,15 @@
 			}
 
 		}
-    }
+    
 
 ?>
 
-<!DOCTYPE html>
-<html>
-
-    <head>
-        <meta charset = "utf-8">
-        <title>
-            my_contacts
-        </title>
-
-        <link rel = "stylesheet" href = "style.css">
-    </head>
-
-    <body>
-
-        <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method = "post">
-            <div class = "login-box">
-
-                <input class="btn" type="submit" name="u_btn" value = "All contacts">
-
-            </div>
-
-        </form>
-
-    </body>
+</body>
 
 </html>
+
+
+
+
+
