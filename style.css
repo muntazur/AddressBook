@@ -136,3 +136,32 @@ body
     font-size: 18px;
 
 }
+
+.welcome
+{
+	width:350px;
+	position:absolute;
+	top:20%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	color:black;
+}
+.address
+{
+	width:400px;
+	position:absolute;
+	top:50%;
+	left:45%;
+	transform: translate(-50%,-50%);
+	color:black;
+}
+
+#W
+{
+	font-size: -webkit-xxx-large;
+}
+
+#A
+{
+	font-size: 60px;
+}

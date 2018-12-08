@@ -19,6 +19,7 @@
           <div class = "cen">
             <ul>
                  <li> <a href = "index.php"> Home </a> </li>
+                 <li> <a href = "#"> Contact </a> </li>
 
             </ul>
 
@@ -26,15 +27,19 @@
 
        </div>
 
+       <div class = "welcome">
 
-       <div class = "enter">
-               
-                <ul>
-                    <li> <a href = "login.php"> Log In </a> </li>
-                    <li> <a href = "signup.php"> Sign Up </a> </li>
-                </ul>
-
+            <h3 id = 'W'> Welcome! </h3>
+            
        </div>
+
+        <div class = "address">
+
+            <h3 id = 'A'> AddressBook </h3>
+            
+       </div>
+
+
 
     </body>
 
