@@ -25,6 +25,13 @@
 
           </div>
 
+           <div class = "logout"> 
+              
+               <ul>
+                    <li> <a href = "log_out.php"> LogOut </a> </li>
+               </ul>
+          </div>
+
        </div>
 
 

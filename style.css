@@ -77,8 +77,9 @@ body
 }
 .top ul
 {
-	padding: 0;
+    padding: 0;
     margin: 0;
+    float: left;
 }
 .top ul li
 {
@@ -152,4 +153,9 @@ body
 #A
 {
 	font-size: 60px;
+}
+
+.logout
+{
+	float: right;
 }
