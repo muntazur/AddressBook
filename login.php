@@ -48,6 +48,7 @@
 <html>
     <head>
         <meta charset = "utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <title>
             LogIn
         </title>
@@ -56,6 +57,19 @@
     </head>
 
     <body>
+
+        <div class = "top">
+
+          <div class = "cen">
+            <ul>
+                 <li> <a href = "index.php"> Home </a> </li>
+                 <li> <a href = "#"> Contact </a> </li>
+
+            </ul>
+
+          </div>
+
+        </div>
 
         <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method = "post">
             <div class = "login-box">
