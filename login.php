@@ -7,32 +7,77 @@
     
 
     require 'db_connect.php';
+
+    if(isset($_POST["u_btn"])){
     
-    // login parameters
-	$email = "muntaz.servant.creator@gmail.com";
-	$pasw = "123456";
+        // login parameters
+	    $email = $_POST['email'];
+	    $pasw = $_POST['password'];
 
 
-	//try to match
-	$sql = "select * from users where email = '$email' and password = '$pasw'";
-	$result = mysqli_query($connection,$sql);
-    $counter = mysqli_num_rows($result);
 
-    if($result && $counter != 0)
-    {   
-    	$row = mysqli_fetch_array($result);
+	    //trying to match
+	    $sql = "select * from users where email = '$email' and password = '$pasw'";
+        if($result=mysqli_query($connection,$sql))
+        {   
+    	   $row = mysqli_fetch_array($result);
 
-    	echo "ID: ". $row[0]."<br>";
-    	echo "Name: ". $row[1]."<br>";
-    	echo "E-mail: ". $row[2]."<br>";
-    	echo "Password: ". $row[3]."<br>";
+           if($row['email'] == $email && $row['password'] == $pasw)
+           {
+             echo "welcom!<br>";
+             $_SESSION['user_id'] = $row['id'];
+           }
+           else
+           {
+             echo "Incorrect! E-mail or password.<br>";
+           }
+    	 
 
-        $_SESSION['user_id'] = $row[0];
-    }
-    else
+            
+         }
+        else
     	echo "You have to signup before log in.<br>";
 
-
-     
+    }
 
 ?>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>
+            LogIn
+        </title>
+
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+
+    <body>
+
+        <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method = "post">
+            <div class = "login-box">
+
+                <h4> Login </h4>
+
+                <div class = "textbox">
+                
+                    <input type="email" name="email" placeholder="E-mail" value="" required>
+                </div>
+
+                <div class = "textbox">
+                
+                    <input type="password" name="password" placeholder="password" value="" required>
+                </div>
+
+                <input class="btn" type="submit" name="u_btn" value = "sign in">
+
+            </div>
+
+        </form>
+
+
+    </body>
+</html>

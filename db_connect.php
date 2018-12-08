@@ -13,5 +13,5 @@
     {
     	die("connection failed: ".mysqli_connect_error());
     }
-    else echo "Mysql has connected successfully with server and database <br>";
+    
 ?>
