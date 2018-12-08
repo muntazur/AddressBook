@@ -24,7 +24,7 @@
 
            if($row['email'] == $email && $row['password'] == $pasw)
            {
-             echo "welcom!<br>";
+             echo "welcome!<br>";
              $_SESSION['user_id'] = $row['id'];
            }
            else
