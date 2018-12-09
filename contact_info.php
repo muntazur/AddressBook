@@ -40,6 +40,9 @@
                 <ul>
                     <li> <a href = "my_contacts.php"> My Contacts </a> </li>
                     <li> <a href = "contact.php"> Add New Contact </a> </li>
+                    <li> <a href = "delete_contact.php">Delete a Contact</a> </li>
+                    <li> <a href = "delete_all.php"> Delete All Contacts </a> </li>
+
                 </ul>
 
        </div>
